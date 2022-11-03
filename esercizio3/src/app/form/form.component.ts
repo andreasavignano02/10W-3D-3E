@@ -1,5 +1,6 @@
 import { identifierName } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
+import { Table } from '../classes/table';
 
 @Component({
   selector: 'app-form',
@@ -11,17 +12,14 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class FormComponent implements OnInit {
   
-  tables = [{
-    id: "number",
-    name: "string",
-    cognome: "string",
-    datadinascita: "number",
-    numeroditelefono: "number"
-  }]
+  tables:Table = []  
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  deletetables(i: number){
+    this.tables.splice(i, 1)
+  }
 }
