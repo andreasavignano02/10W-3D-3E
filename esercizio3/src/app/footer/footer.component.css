@@ -1,0 +1,8 @@
+.container-footer{
+    width: 100%;
+    position: absolute;
+    color: white;
+    background-color: black;
+    text-align: center;
+    bottom: 0;
+}
